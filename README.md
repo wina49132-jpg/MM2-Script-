@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/wina4/bloxfruit-script/main/bloxfruit.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ShadowHub6618/ShadowHub/main/ShadowHub.lua"))()

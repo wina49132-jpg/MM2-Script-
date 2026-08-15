@@ -1,1 +1,25 @@
 
+-- MM2 Basic ESP Script
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local function createESP(player)
+    if player == LocalPlayer then return end
+    player.CharacterAdded:Connect(function(char)
+        local highlight = Instance.new("Highlight")
+        highlight.Parent = char
+        highlight.FillColor = Color3.fromRGB(255, 0, 0)
+        highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
+    end)
+    if player.Character then
+        local highlight = Instance.new("Highlight")
+        highlight.Parent = player.Character
+        highlight.FillColor = Color3.fromRGB(255, 0, 0)
+        highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
+    end
+end
+
+for _, player in pairs(Players:GetPlayers()) do
+    createESP(player)
+end
+Players.PlayerAdded:Connect(createESP)

@@ -1,0 +1,2 @@
+-- สคริปต์ MM2 (Murder Mystery 2) ของจริง
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Securus1/MM2/main/Script.lua"))()
